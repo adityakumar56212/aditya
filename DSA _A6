@@ -1,0 +1,31 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdint.h>
+#include<unistd.h>
+#define BUFFER_ITEMS=10;
+void *producer(void *args){
+    pthread t *args;
+    sem_wait(&empty);
+    sem_wait(&mutex);
+    for(inti=0;i<BUFFER_ITEMS;i++)
+    sem_post(&empty);
+    sem_post(&mutex);
+}
+void *consumer(void *args){
+    pthread t *args;
+    sem_wait(&empty);
+    sem_wait(&mutex);
+    for(int i=0;BUFFER_ITEMS;i>0;i--){
+    sem_post(&full);
+    sem_post(&mutex);
+}
+int main{
+    sem_init(&empty);
+    sem_init(&mutex);
+    sem_init(&full);
+    pthread_create("'producer",NULL");
+    pthread_create("*consumer",NULL");
+    for(inti=0;i<size;i++  )
+}
+
+}
